@@ -1,0 +1,62 @@
+{
+  "name":"react-webpack-boilerplate",
+  "version":"1.0.0",
+  "description":"react for ie8.",
+  "main":"index.js",
+  "scripts":{
+	"start":"cross-env NODE_ENV=development node webpack.config.js --env.hmr --env.express",
+	"dev":"cross-env NODE_ENV=development webpack-dev-server",
+	"build":"cross-env NODE_ENV=production webpack --progress",
+	"watch":"cross-env NODE_ENV=development webpack --watch --env.ie8 --env.express"
+  },
+  "keywords":[
+	"webpack-ie8",
+	"ie8",
+	"react",
+	"react-ie8",
+	"redux-ie8",
+	"react-router-ie8",
+	"anujs"
+  ],
+  "author":"sitorhy",
+  "license":"MIT",
+  "devDependencies":{
+	"babel-core":"^6.26.3",
+	"babel-loader":"^7.1.4",
+	"babel-preset-env":"1.7.0",
+	"babel-preset-react":"^6.24.1",
+	"classnames":"^2.2.5",
+	"clean-webpack-plugin":"^0.1.19",
+	"copy-webpack-plugin":"^4.5.1",
+	"cross-env":"^5.1.6",
+	"css-loader":"^0.28.11",
+	"es3ify-webpack-plugin":"^0.0.1",
+	"express":"^4.16.3",
+	"extract-text-webpack-plugin":"3.0.2",
+	"file-loader":"^1.1.11",
+	"html-webpack-plugin":"^3.2.0",
+	"less":"^3.0.4",
+	"less-loader":"^4.1.0",
+	"resolve-url-loader":"^2.3.0",
+	"style-loader":"^0.21.0",
+	"uglifyjs-webpack-plugin":"^1.2.5",
+	"url-loader":"^1.0.1",
+	"uuid":"^3.2.1",
+	"webpack":"3.12.0",
+	"webpack-dev-middleware":"2.0.6",
+	"webpack-dev-server":"2.11.2",
+	"webpack-hot-middleware":"^2.22.2"
+  },
+  "dependencies":{
+	"anujs":"^1.4.1",
+	"babel-polyfill":"^6.26.0",
+	"console-polyfill":"^0.3.0",
+	"es5-shim":"^4.5.10",
+	"history":"1.17.0",
+	"react":"0.14.9",
+	"react-dom":"0.14.9",
+	"react-router":"1.0.3",
+	"redux":"3.5.2",
+	"redux-thunk":"2.3.0"
+  }
+}
