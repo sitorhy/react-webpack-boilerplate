@@ -229,7 +229,7 @@ const $_WEBPACK_CONFIG={
 				from:path.resolve("src","static"),
 				to:path.join($_CONFIG.buildPath,"static"),
 				toType:"dir",
-				ignore:[]
+				ignore:[".gitkeep"]
 			}
 		])
 	].concat($_STYLE_EXTRACTIONS),
