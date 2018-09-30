@@ -18,7 +18,8 @@ A basic Webpack boilerplate with React / anu.
         `npm run watch`
     
     + step 2:
-        another session, use with npm 'http-server':
+        another session, use with npm 'http-server'.
+
         install 'http-server' first : `npm install http-server -g`
 
         then run:
