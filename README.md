@@ -14,9 +14,16 @@ A basic Webpack boilerplate with React / anu.
     `npm run build`
 
 * Run in IE 8
-    `npm run watch`
+    + step 1:
+        `npm run watch`
     
-    use with npm http-server:
-    `npm install http-server -g`
-    
-    `http-server ./dist -p 8086`
+    + step 2:
+        another session, use with npm 'http-server':
+        install 'http-server' first : `npm install http-server -g`
+
+        then run:
+
+        `http-server ./dist -p 8086`
+
+        visit `http://127.0.0.1:8086/` in IE8.
+

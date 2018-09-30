@@ -7,7 +7,7 @@
 		"start": "cross-env NODE_ENV=development node webpack.config.js --env.hmr --env.express",
 		"dev": "cross-env NODE_ENV=development webpack-dev-server",
 		"build": "cross-env NODE_ENV=production webpack --progress",
-		"watch": "cross-env NODE_ENV=development webpack --watch --env.ie8 --env.express"
+		"watch": "cross-env NODE_ENV=production webpack --watch --env.ie8"
 	},
 	"keywords": [
 		"webpack-ie8",
