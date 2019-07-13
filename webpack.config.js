@@ -2,7 +2,7 @@ const path=require("path");
 const HtmlWebpackPlugin=require("html-webpack-plugin");
 const ES3ifyWebpackPlugin=require("es3ify-webpack-plugin");
 const ExtractTextWebpackPlugin=require("extract-text-webpack-plugin");
-const CleanWebpackPlugin=require("clean-webpack-plugin");
+const {CleanWebpackPlugin}=require("clean-webpack-plugin");
 const UglifyjsWebpackPlugin=require("uglifyjs-webpack-plugin");
 const CopyWebpackPlugin=require("copy-webpack-plugin");
 
@@ -12,9 +12,9 @@ const WebpackHotMiddleware=require("webpack-hot-middleware");
 const express=require("express");
 
 const $_IS_DEBUG=process.env.NODE_ENV==="development";
-const $_IS_WATCH_IE8=process.argv.findIndex(i=>i==="--env.ie8")>=0;
-const $_IS_EXPRESS=process.argv.findIndex(i=>i==="--env.express")>=0;
-const $_IS_HMR=process.argv.findIndex(i=>i==="--env.hmr")>=0;
+const $_IS_WATCH_IE8=process.env.IE8_WATCH==="true";
+const $_IS_EXPRESS=process.env.USE_EXPRESS==="true";
+const $_IS_HMR=process.env.HMR==="true";
 
 const $_DEVELOPMENT_CONFIG=
 	{
@@ -236,9 +236,9 @@ const $_WEBPACK_CONFIG={
 	devServer:$_DEVELOPMENT_CONFIG.devServer
 };
 
-if(!$_IS_DEBUG&& !$_IE8_WATCH_OPTIONS)
+if(!$_IS_DEBUG && !$_IS_WATCH_IE8)
 {
-	$_WEBPACK_CONFIG.plugins.splice(0,0,new CleanWebpackPlugin(["dist"]));
+	$_WEBPACK_CONFIG.plugins.splice(0,0,new CleanWebpackPlugin);
 }
 
 if($_CONFIG.compress)

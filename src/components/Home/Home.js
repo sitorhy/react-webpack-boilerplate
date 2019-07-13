@@ -5,6 +5,7 @@ import {Link} from "react-router";
 import "./global.less"
 
 import styles from "./todo.scope.less";
+import imgLogo from "../../assets/logo.png";
 
 class Home extends React.Component
 {
@@ -13,7 +14,9 @@ class Home extends React.Component
         return (
             <div>
                 <div className={"home-page"}>
-                    <p>Home Page</p>
+                    <p style={{textAlign:"center"}}>
+                        <img src={imgLogo}/>
+                    </p>
                     <div>
                         <Link to={"/home/welcome"}>Welcome</Link>
                     </div>
