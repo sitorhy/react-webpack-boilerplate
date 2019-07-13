@@ -1,6 +1,6 @@
 react-webpack-boilerplate
 -----------------------------------------
-A basic Webpack boilerplate with React / anu.
+A basic webpack boilerplate with react / anu.
 
 ## Usage
 - Install:
@@ -26,5 +26,5 @@ A basic Webpack boilerplate with React / anu.
 
         `http-server ./dist -p 8086`
 
-        visit `http://127.0.0.1:8086/` in IE8.
+        visit `http://127.0.0.1:8086/` or `http://127.0.0.1/index.html` in IE8.
 
