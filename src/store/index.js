@@ -1,8 +1,8 @@
 import {createStore, applyMiddleware} from "redux";
 import thunkMiddleware from "redux-thunk";
 
-import ToDo from "./modules/ToDo";
+import env from "./modules/env";
 
-const store = createStore(ToDo, applyMiddleware(thunkMiddleware));
+const store = createStore(env, applyMiddleware(thunkMiddleware));
 
 export default store;
