@@ -26,6 +26,7 @@ A basic webpack boilerplate with react / anu.
         `npm run watch` , build automatically , need manual refresh.
     
     + step 2:
+    
         another session, use with npm 'http-server'.
 
         install 'http-server' first : `npm install http-server -g`

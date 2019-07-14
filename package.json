@@ -1,5 +1,6 @@
 {
 	"name": "react-webpack-boilerplate",
+	"repository": "https://github.com/sitorhy/react-webpack-boilerplate.git",
 	"version": "1.0.0",
 	"description": "react for ie8.",
 	"main": "index.js",
