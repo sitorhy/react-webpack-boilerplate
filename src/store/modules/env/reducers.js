@@ -4,7 +4,7 @@ import {combineReducers} from "redux";
 
 const env = function (state = {}, action)
 {
-    const {type, payload} = action;
+    const {type, payload={}} = action;
     const {
         platform,
         userAgent,
