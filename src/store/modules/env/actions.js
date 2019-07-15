@@ -1,3 +1,5 @@
+import React from "react";
+
 export const SET_PLATFORM = "SET_TEXT";
 export const SET_USERAGENT = "SET_USERAGENT";
 export const SET_REACT_VERSION = "SET_REACT_VERSION";
@@ -17,7 +19,8 @@ export function setReactVersion(version)
     return {type: SET_REACT_VERSION, payload: {reactVersion: version}};
 }
 
-export function fetchReactVersion()
+/* test only */
+export function asyncSetReactVersion()
 {
     return (dispatch, getState) =>
     {
@@ -25,9 +28,10 @@ export function fetchReactVersion()
         {
             setTimeout(() =>
             {
-                dispatch(setReactVersion("0.14.9"));
-                resolve({ver:"0.14.9"});
-            }, 3000);
+                dispatch(setReactVersion(React.version));
+                const {env} = getState();
+                resolve(env);
+            }, 2000);
         });
     };
 }

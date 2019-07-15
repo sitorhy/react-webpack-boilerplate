@@ -177,7 +177,7 @@ module.exports = {
             minify: false,
             hash: true,
             inject: true,
-            chunks: ["console-polyfill", "es5-shim", "es5-sham", "babel-polyfill", "main", "runtime~main", "vendors~main"],
+            chunks: ["console-polyfill", "babel-polyfill", "main", "runtime~main", "vendors~main"],
             chunksSortMode: "manual"
         }), new CopyWebpackPlugin([{
             from: env.appStatic,
