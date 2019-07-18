@@ -50,7 +50,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
-    "anujs": "^1.5.3",
+    "anujs": "1.5.2",
     "console-polyfill": "^0.3.0",
     "history": "1.17.0",
     "react": "0.14.9",

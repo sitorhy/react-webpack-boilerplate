@@ -8,7 +8,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const {resolve} = require("./utils");
 const env = require("./config.env");
-const {isEnvProduction, isEnvDevelopment} = env;
+const {isEnvProduction, isEnvDevelopment, shouldUseSourceMap} = env;
 
 function generateStyleLoaders(preProcessor = "css-loader", options = {})
 {
@@ -87,6 +87,7 @@ module.exports = {
                     ie8: true,
                     keep_fnames: false
                 },
+                sourceMap: shouldUseSourceMap
             }),
             new OptimizeCSSAssetsPlugin()
         ]
@@ -102,7 +103,7 @@ module.exports = {
         filename: outputPublicPath("[name].[hash].js", "scripts")
     },
     resolve: {
-        extensions: [".js", ".vue", ".json"],
+        extensions: [".js", ".json"],
         alias: {
             "@": env.appSrc,
             "react": "anujs/dist/ReactIE",
