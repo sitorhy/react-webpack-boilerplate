@@ -4,9 +4,9 @@ A basic webpack boilerplate with react / anu.
 
 ## Usage
 - Install:
-    - npm: `npm install`
+    - npm: `npm install --force`
     
-    - yarn: `yarn install`
+    - yarn: `yarn install --force`
 
 * Run dev server (Chrome / IE9+):
 
@@ -35,5 +35,5 @@ A basic webpack boilerplate with react / anu.
 
         `http-server ./dist -p 8086`
 
-        visit `http://127.0.0.1` or `http://127.0.0.1/index.html` in IE8.
+        visit `http://127.0.0.1:8086` or `http://127.0.0.1:8086/index.html` in IE8.
 
